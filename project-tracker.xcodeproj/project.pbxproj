@@ -14,6 +14,8 @@
 		CFDBE64E2BABA14E009C6C70 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDBE64D2BABA14E009C6C70 /* Project.swift */; };
 		CFDBE6502BABA216009C6C70 /* ProjectUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDBE64F2BABA216009C6C70 /* ProjectUpdate.swift */; };
 		CFDBE6532BAC8E4F009C6C70 /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDBE6522BAC8E4F009C6C70 /* FontHelper.swift */; };
+		CFDBE6562BACEFC3009C6C70 /* StatBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDBE6552BACEFC3009C6C70 /* StatBubbleView.swift */; };
+		CFDBE6582BACF5A2009C6C70 /* ProjectCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDBE6572BACF5A2009C6C70 /* ProjectCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		CFDBE64D2BABA14E009C6C70 /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		CFDBE64F2BABA216009C6C70 /* ProjectUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectUpdate.swift; sourceTree = "<group>"; };
 		CFDBE6522BAC8E4F009C6C70 /* FontHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontHelper.swift; sourceTree = "<group>"; };
+		CFDBE6552BACEFC3009C6C70 /* StatBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatBubbleView.swift; sourceTree = "<group>"; };
+		CFDBE6572BACF5A2009C6C70 /* ProjectCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,10 +62,10 @@
 			isa = PBXGroup;
 			children = (
 				CFDBE63E2BABA07E009C6C70 /* project_trackerApp.swift */,
-				CFDBE64C2BABA130009C6C70 /* models */,
-				CFDBE6402BABA07E009C6C70 /* ProjectListView.swift */,
-				CFDBE6512BAC8E30009C6C70 /* Helpers */,
+				CFDBE6542BACEF6C009C6C70 /* project-list */,
 				CFDBE6422BABA080009C6C70 /* Assets.xcassets */,
+				CFDBE64C2BABA130009C6C70 /* models */,
+				CFDBE6512BAC8E30009C6C70 /* Helpers */,
 				CFDBE6442BABA080009C6C70 /* Preview Content */,
 			);
 			path = "project-tracker";
@@ -90,6 +94,16 @@
 				CFDBE6522BAC8E4F009C6C70 /* FontHelper.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		CFDBE6542BACEF6C009C6C70 /* project-list */ = {
+			isa = PBXGroup;
+			children = (
+				CFDBE6402BABA07E009C6C70 /* ProjectListView.swift */,
+				CFDBE6552BACEFC3009C6C70 /* StatBubbleView.swift */,
+				CFDBE6572BACF5A2009C6C70 /* ProjectCardView.swift */,
+			);
+			path = "project-list";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +180,8 @@
 				CFDBE6532BAC8E4F009C6C70 /* FontHelper.swift in Sources */,
 				CFDBE6412BABA07E009C6C70 /* ProjectListView.swift in Sources */,
 				CFDBE63F2BABA07E009C6C70 /* project_trackerApp.swift in Sources */,
+				CFDBE6562BACEFC3009C6C70 /* StatBubbleView.swift in Sources */,
+				CFDBE6582BACF5A2009C6C70 /* ProjectCardView.swift in Sources */,
 				CFDBE64E2BABA14E009C6C70 /* Project.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
