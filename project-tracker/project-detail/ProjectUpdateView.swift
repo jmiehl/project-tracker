@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct ProjectUpdateView: View {
+    
+    var update: ProjectUpdate
+    
+    
     var body: some View {
         ZStack {
             Rectangle()
@@ -17,10 +21,10 @@ struct ProjectUpdateView: View {
             
             VStack (alignment: .leading, spacing: 10) {
                 HStack {
-                    Text ("Thursday, September 17, 2023")
+                    Text (DateHelper.projectUpdateDate(inputDate: update.date))
                         .padding(.leading)
                     Spacer()
-                    Text ("9 Hours")
+                    Text ("\(String(Int(update.hours))) Hours ")
                         .padding(.trailing)
                     
                 }
@@ -28,10 +32,10 @@ struct ProjectUpdateView: View {
                 .background{
                     Color("Orchid")
                 }
-                Text ("Project Headline")
+                Text (update.headline)
                     .font(.smallHeadline)
                     .padding(.horizontal)
-                Text ("Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. ")
+                Text (update.summary)
                     .padding(.horizontal)
                     .padding(.bottom)
             }
@@ -42,6 +46,4 @@ struct ProjectUpdateView: View {
     }
 }
 
-#Preview {
-    ProjectUpdateView()
-}
+
