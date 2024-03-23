@@ -16,6 +16,7 @@
 		CFDBE6532BAC8E4F009C6C70 /* FontHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDBE6522BAC8E4F009C6C70 /* FontHelper.swift */; };
 		CFDBE6562BACEFC3009C6C70 /* StatBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDBE6552BACEFC3009C6C70 /* StatBubbleView.swift */; };
 		CFDBE6582BACF5A2009C6C70 /* ProjectCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDBE6572BACF5A2009C6C70 /* ProjectCardView.swift */; };
+		CFDBE65A2BAE4B10009C6C70 /* AddProjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDBE6592BAE4B10009C6C70 /* AddProjectView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		CFDBE6522BAC8E4F009C6C70 /* FontHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontHelper.swift; sourceTree = "<group>"; };
 		CFDBE6552BACEFC3009C6C70 /* StatBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatBubbleView.swift; sourceTree = "<group>"; };
 		CFDBE6572BACF5A2009C6C70 /* ProjectCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectCardView.swift; sourceTree = "<group>"; };
+		CFDBE6592BAE4B10009C6C70 /* AddProjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +104,7 @@
 				CFDBE6402BABA07E009C6C70 /* ProjectListView.swift */,
 				CFDBE6552BACEFC3009C6C70 /* StatBubbleView.swift */,
 				CFDBE6572BACF5A2009C6C70 /* ProjectCardView.swift */,
+				CFDBE6592BAE4B10009C6C70 /* AddProjectView.swift */,
 			);
 			path = "project-list";
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 			files = (
 				CFDBE6502BABA216009C6C70 /* ProjectUpdate.swift in Sources */,
 				CFDBE6532BAC8E4F009C6C70 /* FontHelper.swift in Sources */,
+				CFDBE65A2BAE4B10009C6C70 /* AddProjectView.swift in Sources */,
 				CFDBE6412BABA07E009C6C70 /* ProjectListView.swift in Sources */,
 				CFDBE63F2BABA07E009C6C70 /* project_trackerApp.swift in Sources */,
 				CFDBE6562BACEFC3009C6C70 /* StatBubbleView.swift in Sources */,
