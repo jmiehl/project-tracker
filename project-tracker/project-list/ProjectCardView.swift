@@ -34,17 +34,20 @@ struct ProjectCardView: View {
                     Spacer()
                     
                 }
-                Text ("My current focus is...")
-                    .font(.featuredText)
-                    .foregroundStyle(Color.gray)
-                    .padding(.leading, 10)
                 
-                Text ("Design the new website")
-                    .font(.featuredText)
-                    .foregroundStyle(Color.gray)
-                    .bold()
-                    .padding(.bottom, 10)
-                    .padding(.leading, 10)
+                if (project.focus.trimmingCharacters(in: .whitespacesAndNewlines) != "") {
+                    Text ("My current focus is...")
+                        .font(.featuredText)
+                        .foregroundStyle(Color.gray)
+                        .padding(.leading, 10)
+                    
+                    Text (project.focus)
+                        .font(.featuredText)
+                        .foregroundStyle(Color.gray)
+                        .bold()
+                        .padding(.bottom, 10)
+                        .padding(.leading, 10)
+                }
             }
         }
         .padding()

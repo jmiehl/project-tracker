@@ -11,6 +11,7 @@
 		CF0C9F652BAF364400AFE45E /* ProjectUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0C9F642BAF364400AFE45E /* ProjectUpdateView.swift */; };
 		CF0C9F672BAF60C700AFE45E /* AddProjectUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0C9F662BAF60C700AFE45E /* AddProjectUpdateView.swift */; };
 		CF0C9F692BAF6E8500AFE45E /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0C9F682BAF6E8500AFE45E /* DateHelper.swift */; };
+		CF0C9F6B2BAF7BD600AFE45E /* EditFocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0C9F6A2BAF7BD600AFE45E /* EditFocusView.swift */; };
 		CFDBE63F2BABA07E009C6C70 /* project_trackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDBE63E2BABA07E009C6C70 /* project_trackerApp.swift */; };
 		CFDBE6412BABA07E009C6C70 /* ProjectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDBE6402BABA07E009C6C70 /* ProjectListView.swift */; };
 		CFDBE6432BABA080009C6C70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFDBE6422BABA080009C6C70 /* Assets.xcassets */; };
@@ -28,6 +29,7 @@
 		CF0C9F642BAF364400AFE45E /* ProjectUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectUpdateView.swift; sourceTree = "<group>"; };
 		CF0C9F662BAF60C700AFE45E /* AddProjectUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProjectUpdateView.swift; sourceTree = "<group>"; };
 		CF0C9F682BAF6E8500AFE45E /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
+		CF0C9F6A2BAF7BD600AFE45E /* EditFocusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFocusView.swift; sourceTree = "<group>"; };
 		CFDBE63B2BABA07E009C6C70 /* project-tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "project-tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFDBE63E2BABA07E009C6C70 /* project_trackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = project_trackerApp.swift; sourceTree = "<group>"; };
 		CFDBE6402BABA07E009C6C70 /* ProjectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListView.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 				CF0C9F622BAF216600AFE45E /* ProjectDetailView.swift */,
 				CF0C9F642BAF364400AFE45E /* ProjectUpdateView.swift */,
 				CF0C9F662BAF60C700AFE45E /* AddProjectUpdateView.swift */,
+				CF0C9F6A2BAF7BD600AFE45E /* EditFocusView.swift */,
 			);
 			path = "project-detail";
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 			files = (
 				CFDBE6502BABA216009C6C70 /* ProjectUpdate.swift in Sources */,
 				CFDBE6532BAC8E4F009C6C70 /* FontHelper.swift in Sources */,
+				CF0C9F6B2BAF7BD600AFE45E /* EditFocusView.swift in Sources */,
 				CF0C9F632BAF216600AFE45E /* ProjectDetailView.swift in Sources */,
 				CFDBE65A2BAE4B10009C6C70 /* AddProjectView.swift in Sources */,
 				CFDBE6412BABA07E009C6C70 /* ProjectListView.swift in Sources */,
