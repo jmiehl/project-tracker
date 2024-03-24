@@ -12,6 +12,7 @@ struct ProjectListView: View {
     
     @State private var newProject: Project? // variable to bind to sheet details
     @Query private var projects: [Project] //obtains the data for projects
+    @State private var selectedProject: Project?
     
     var body: some View {
         NavigationStack {
@@ -32,48 +33,53 @@ struct ProjectListView: View {
                         // displays the projects
                         VStack (alignment: .leading, spacing: 26){
                             ForEach(projects) { p in
-                                    // using navigation link allows for moving to project detail
-                                NavigationLink {
-                                    // displays the project detail view
-                                    ProjectDetailView(project: p)
-                                } label: {
-                                    // displays the poject card view
-                                    ProjectCardView(project: p)
-                                }
-                                .buttonStyle(.plain)
-
                                 
-                               
+                                ProjectCardView(project: p)
+                                    .onTapGesture {
+                                        selectedProject = p
+                                    }
+                                    .onLongPressGesture {
+                                        newProject = p
+                                    }
                             }
-                            
                             
                         }
                     }
-                    
-                    Button(action: {
-                        // create new project
-                        self.newProject = Project()
-                    }, label: {
-                        ZStack {
-                            // builds a custom button
-                            Circle()
-                                .frame(width: 65)
-                                .foregroundColor(.black)
-                            Image("cross")
-                        }
-                    })
                 }
                 .padding()
+                VStack {
+                    Spacer()
+                    HStack {
+                        Button(action: {
+                            // create new project
+                            self.newProject = Project()
+                        }, label: {
+                            ZStack {
+                                // builds a custom button
+                                Circle()
+                                    .frame(width: 65)
+                                    .foregroundColor(.black)
+                                Image("cross")
+                            }
+                        })
+                        Spacer()
+                    }
+                }
+                .padding(.leading)
+            }
+            .navigationDestination(item: $selectedProject) { project in
+                ProjectDetailView(project: project)
             }
         }
         //displays a quarter sheet to create a new project based on binded variable $newProject
         .sheet(item: $newProject) { project in
-            AddProjectView(project: project)
+            
+            // set isEdit to true if their is a project name
+            let isEdit = project.name.trimmingCharacters(in: .whitespacesAndNewlines) != ""
+            //Display edit view
+            EditProjectView(project: project, isEditMode: isEdit)
                 .presentationDetents([.fraction(0.20)])
         }
     }
 }
 
-#Preview {
-    ProjectListView()
-}
