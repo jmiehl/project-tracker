@@ -12,6 +12,7 @@
 		CF0C9F672BAF60C700AFE45E /* EditUpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0C9F662BAF60C700AFE45E /* EditUpdateView.swift */; };
 		CF0C9F692BAF6E8500AFE45E /* DateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0C9F682BAF6E8500AFE45E /* DateHelper.swift */; };
 		CF0C9F6B2BAF7BD600AFE45E /* EditFocusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0C9F6A2BAF7BD600AFE45E /* EditFocusView.swift */; };
+		CF0C9F6D2BB0BFB800AFE45E /* StatHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0C9F6C2BB0BFB800AFE45E /* StatHelper.swift */; };
 		CFDBE63F2BABA07E009C6C70 /* project_trackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDBE63E2BABA07E009C6C70 /* project_trackerApp.swift */; };
 		CFDBE6412BABA07E009C6C70 /* ProjectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFDBE6402BABA07E009C6C70 /* ProjectListView.swift */; };
 		CFDBE6432BABA080009C6C70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CFDBE6422BABA080009C6C70 /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 		CF0C9F662BAF60C700AFE45E /* EditUpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUpdateView.swift; sourceTree = "<group>"; };
 		CF0C9F682BAF6E8500AFE45E /* DateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelper.swift; sourceTree = "<group>"; };
 		CF0C9F6A2BAF7BD600AFE45E /* EditFocusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditFocusView.swift; sourceTree = "<group>"; };
+		CF0C9F6C2BB0BFB800AFE45E /* StatHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatHelper.swift; sourceTree = "<group>"; };
 		CFDBE63B2BABA07E009C6C70 /* project-tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "project-tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CFDBE63E2BABA07E009C6C70 /* project_trackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = project_trackerApp.swift; sourceTree = "<group>"; };
 		CFDBE6402BABA07E009C6C70 /* ProjectListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectListView.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			children = (
 				CFDBE6522BAC8E4F009C6C70 /* FontHelper.swift */,
 				CF0C9F682BAF6E8500AFE45E /* DateHelper.swift */,
+				CF0C9F6C2BB0BFB800AFE45E /* StatHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -213,6 +216,7 @@
 				CF0C9F652BAF364400AFE45E /* ProjectUpdateView.swift in Sources */,
 				CFDBE6582BACF5A2009C6C70 /* ProjectCardView.swift in Sources */,
 				CF0C9F692BAF6E8500AFE45E /* DateHelper.swift in Sources */,
+				CF0C9F6D2BB0BFB800AFE45E /* StatHelper.swift in Sources */,
 				CFDBE64E2BABA14E009C6C70 /* Project.swift in Sources */,
 				CF0C9F672BAF60C700AFE45E /* EditUpdateView.swift in Sources */,
 			);

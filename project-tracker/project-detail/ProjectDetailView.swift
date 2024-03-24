@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ProjectDetailView: View {
     
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.modelContext) private var context
     var project: Project
     @State private var newUpdate: ProjectUpdate?
     @State private var showEditFocus = false
@@ -30,10 +32,10 @@ struct ProjectDetailView: View {
                     
                     HStack(alignment: .center, spacing: 13) {
                         Spacer()
-                        StatBubbleView(title: "Hours", stat: "290", startColor: Color("Navy"), endColor: Color("Sky Blue"))
-                        StatBubbleView(title: "Session", stat: "34", startColor: Color("Turtle Green"), endColor: Color("Lime"))
-                        StatBubbleView(title: "Updates", stat: "32", startColor: Color("Maroon"), endColor: Color("Gem Purple"))
-                        StatBubbleView(title: "Wins", stat: "9", startColor: Color("Maroon"), endColor: Color("Olive"))
+                        StatBubbleView(title: "Hours", stat: String(project.hours), startColor: Color("Navy"), endColor: Color("Sky Blue"))
+                        StatBubbleView(title: "Session", stat: String(project.sessions), startColor: Color("Turtle Green"), endColor: Color("Lime"))
+                        StatBubbleView(title: "Updates", stat: String(project.updates.count), startColor: Color("Maroon"), endColor: Color("Gem Purple"))
+                        StatBubbleView(title: "Wins", stat: String(project.wins), startColor: Color("Maroon"), endColor: Color("Olive"))
                         Spacer()
                         
                         
@@ -146,6 +148,12 @@ struct ProjectDetailView: View {
         update.headline = "Milestone Achieved"
         update.summary = project.focus
         project.updates.insert(update, at: 0) //saves the update
+        
+        //Force save
+        try? context.save()
+        
+        //update stats
+        StatHelper.updateAdded(project: project, update: update)
         
         
         //clear the current focus
