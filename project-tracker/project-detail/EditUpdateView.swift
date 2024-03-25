@@ -41,7 +41,7 @@ struct EditUpdateView: View {
                     TextField("Hours", text: $hours)
                         .keyboardType(.numberPad)
                         .frame(width: 60)
-
+                    
                     Spacer()
                     
                     Button(isEditMode ? "Save" : "Save"){
@@ -53,15 +53,21 @@ struct EditUpdateView: View {
                         update.hours = Double(hours)!
                         
                         if !isEditMode {
-                            //Add Project updat
-                            project.updates.insert(update, at: 0)
-                            try? context.save()
-                            // update stats
-                            StatHelper.updateAdded(project: project, update: update)
+                            withAnimation {
+                                //Add Project update
+                                project.updates.insert(update, at: 0)
+                                try? context.save()
+                                // update stats
+                                StatHelper.updateAdded(project: project, update: update)
+                                
+                            }
                         } else {
-                            //edit project update
-                            // update stats
-                            StatHelper.updateEdited(project: project, hoursDifference: hoursDifference)
+                            withAnimation {
+                                //edit project update
+                                // update stats
+                                StatHelper.updateEdited(project: project, hoursDifference: hoursDifference)
+                            }
+                            
                         }
                         dismiss()
                     }
@@ -88,14 +94,17 @@ struct EditUpdateView: View {
         }
         .confirmationDialog("Are you sure you want to delete the update?", isPresented: $showConfirmation) {
             Button("Yes, Delete it") {
-                //remove all updates from the project with the same id
-                project.updates.removeAll {
-                    u in  u.id == update.id
+                withAnimation {
+                    //remove all updates from the project with the same id
+                    project.updates.removeAll {
+                        u in  u.id == update.id
+                    }
+                    // force a a swiftdata save
+                    try? context.save()
+                    
+                    StatHelper.updateDeleted(project: project, update: update)
                 }
-                // force a a swiftdata save
-                try? context.save()
-                
-                StatHelper.updateDeleted(project: project, update: update)
+               
                 dismiss()
             }
         }

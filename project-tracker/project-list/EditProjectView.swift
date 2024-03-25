@@ -33,12 +33,18 @@ struct EditProjectView: View {
                     TextField("Project name", text: $projectName)
                         .textFieldStyle(.roundedBorder)
                     Button(isEditMode ? "Save" : "Add"){
+                        
                         if isEditMode {
                             //save the new project name
                             project.name = projectName
+                        } else {
+                            withAnimation {
+                                project.name = projectName
+                                context.insert(project) // saves the project
+                                try? context.save()
+                            }
                         }
-                        project.name = projectName
-                        context.insert(project) // saves the project
+                       
                         dismiss()
                     }
                     .buttonStyle(.borderedProminent)
@@ -62,8 +68,12 @@ struct EditProjectView: View {
         }
         .confirmationDialog("Do you really want to delete", isPresented: $showConfirmation, titleVisibility: .visible) {
             Button("Yes, delete it") {
-                //Delete project from SwiftData
-                context.delete(project)
+                withAnimation {
+                    //Delete project from SwiftData
+                    context.delete(project)
+                    try? context.save()
+                }
+                
                 dismiss()
             }
         }
